@@ -1,0 +1,76 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-10px);
+    background: #818cf8;
+  }
+  20% {
+    transform: translateY(0px);
+  }
+}
+
+.loader span {
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 50ms;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 150ms;
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+.animatedBackground {
+  background: linear-gradient(270deg, #000000, #ff6600, #000000);
+  background-size: 200% 200%;
+  animation: moveBackground 10s ease infinite;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column; /* Ensure it's not column-reverse */
+}
+
+
+.messages-list-container {
+  max-height: 80vh; /* Adjust based on your layout */
+  overflow-y: auto; /* Enables vertical scrolling */
+  background-color: black; /* Your existing background */
+  padding-top: 8px; /* Your existing padding */
+  margin: auto;
+  width: max-content; /* Adjust or remove based on your layout */
+  max-width: 100%; /* Ensures it does not overflow the screen width */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animatedBackground {
+  background: linear-gradient(-45deg, #3c3c3c, #000000, #000000, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+
+
